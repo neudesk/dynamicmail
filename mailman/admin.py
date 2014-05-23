@@ -24,5 +24,5 @@ class RecipientsAdmin(admin.ModelAdmin):
 
 admin.site.register(WebHandler)
 admin.site.register(Recipient, RecipientsAdmin)
-admin.site.register(Column)
+admin.site.register(Column, ColumnAdmin)
 admin.site.register(ColumnData, ColumnDataAdmin)

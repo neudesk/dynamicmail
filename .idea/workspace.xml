@@ -91,7 +91,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mailman/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="464" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+            <state line="23" column="4" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -100,7 +100,7 @@
       <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mailman/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.035128806" vertical-offset="0" max-vertical-offset="495">
+            <state line="26" column="39" selection-start="818" selection-end="818" vertical-scroll-proportion="0.913349" vertical-offset="0" max-vertical-offset="495">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -804,14 +804,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="464" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+        <state line="23" column="4" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.035128806" vertical-offset="0" max-vertical-offset="495">
+        <state line="26" column="39" selection-start="818" selection-end="818" vertical-scroll-proportion="0.913349" vertical-offset="0" max-vertical-offset="495">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
