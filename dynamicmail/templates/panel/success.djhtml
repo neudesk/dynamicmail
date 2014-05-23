@@ -1,0 +1,20 @@
+{% extends 'base.djhtml' %}
+{% block extrajs %}
+{% endblock %}
+{% block content %}
+  <div class="row-fluid">
+      <div class="col-md-6 col-md-offset-3">
+          <div class="well well-small" style="margin-top: 80px;">
+              <h3><em style="color: #ccc">Dynamic</em>Mailer</h3>
+              <div class="alert alert-info">
+                <p>
+                    <i class="fa fa-check-circle-o fa-3x"></i>
+                    <strong>Email Sent! </strong>
+                    Please make sure variables included in your custome email template are available in our database.
+                    Click <a href="{% url 'panel_index' %}" class="alert-link">here</a> to send more emails.
+                </p>
+              </div>
+          </div>
+      </div>
+  </div>
+{% endblock %}

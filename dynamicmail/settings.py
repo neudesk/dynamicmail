@@ -118,6 +118,16 @@ ROOT_URLCONF = 'dynamicmail.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'dynamicmail.wsgi.application'
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+
+TEMPLATE_CONTEXT_PROCESSORS += (
+    "django.core.context_processors.request",
+)
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'DynamicMailer',
+}
+
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -136,6 +146,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'tastypie',
     # Uncomment the next line to enable the admin:
+    'suit',
     'django.contrib.admin',
     'mailman',
     # Uncomment the next line to enable admin documentation:

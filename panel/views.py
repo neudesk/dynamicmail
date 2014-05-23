@@ -1,13 +1,22 @@
 from django.core.urlresolvers import reverse
-from django.views.generic import TemplateView
+from django.shortcuts import redirect
+from django.views.generic import TemplateView, FormView
 from .forms import PanelForm
 from mailman.models import WebHandler
+from django.contrib import messages
 
-class PanelIndex(TemplateView):
+class PanelIndex(FormView):
     template_name = "panel/index.djhtml"
     form_class = PanelForm
+    success_url = '/panel/success'
 
-    def get_context_data(self, **kwargs):
-        context = super(PanelIndex, self).get_context_data( **kwargs)
-        context['form'] = self.form_class
-        return context
+    def form_valid(self, form):
+        try:
+            form.save(commit=True)
+        except Exception as e:
+            messages.error(self.request, e)
+            self.success_url = '/panel/'
+        return super(PanelIndex, self).form_valid(form)
+
+class Success(TemplateView):
+    template_name = "panel/success.djhtml"

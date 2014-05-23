@@ -4,3 +4,4 @@ mysql-python
 django-bootstrap3
 sendwithus
 django-tastypie
+django-grappelli

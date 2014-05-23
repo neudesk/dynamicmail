@@ -1,5 +1,7 @@
 from django import forms
-from mailman.models import WebHandler, get_swu_templates
+from mailman.models import Recipient, WebHandler, get_swu_templates
+import sendwithus
+from django.conf import settings
 
 class PanelForm(forms.Form):
     def __init__(self, *args, **kwargs):
@@ -16,3 +18,29 @@ class PanelForm(forms.Form):
     email_templates = forms.ChoiceField(choices=(),
                                         widget=forms.Select(attrs={'class':'form-control input-lg'}),
                                         required=True)
+    recipients = forms.CharField(max_length=450)
+
+    def save(self, commit=True):
+        template_id = self.cleaned_data['email_templates']
+        webhandler = WebHandler.objects.filter(id=self.cleaned_data['web_handler'])[0]
+        columndata = webhandler.columndata_set.all()
+        api = sendwithus.api(api_key=settings.SWU_API_KEY)
+        recipients = self.cleaned_data['recipients'].split(',')
+        data = {}
+        for d in columndata:
+            data[d.column.slug] = d.value
+        for r in recipients:
+            recipient = Recipient.objects.filter(email=r)[0]
+            rec_data = {'first_name': recipient.first_name,
+                        'last_name': recipient.last_name,
+                        'email': recipient.email,
+                        'linkedin_link': recipient.linkedin_link}
+            res = api.send(
+                            email_id=template_id,
+                            recipient={'address': r},
+                            email_data=data.update(rec_data)
+                          )
+            if res.status_code != 200:
+                raise Exception(res.text)
+                break
+

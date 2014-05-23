@@ -20,19 +20,22 @@
       <div class="col-md-6 col-md-offset-3">
           <div class="well well-small" style="margin-top: 80px;">
               <h3><em style="color: #ccc">Dynamic</em>Mailer</h3>
-              <form method="" action="">
+              <form method="POST" action=".">
                 {% csrf_token %}
                 {% for f in form %}
+                  {% if f.name == 'recipients' %}
+                  <div class="form-group">
+                      <label>Recipients</label><br />
+                      <input type="text" id="id_recipients" class="form-control input-lg" name="{{ f.name }}" value="" data-role="tagsinput" placeholder="Add Recipients" />
+                  </div>
+                  {% else %}
                   <div class="form-group">
                       <label for="{{ f.name }}" class="control-label">{{ f.label }}</label>
                       {{ f }}
                   </div>
+                  {% endif %}
                 {% endfor %}
-                  <div class="form-group">
-                      <label>Recipients</label><br />
-                      <input type="text" id="id_recipients" class="form-control input-lg" name="recipients" value="" data-role="tagsinput" placeholder="Add Recipients" />
-                  </div>
-                  <button class="btn btn-success btn-lg sendmail">Send</button>
+                  <button type="submit" class="btn btn-success btn-lg sendmail">Send</button>
               </form>
           </div>
       </div>
