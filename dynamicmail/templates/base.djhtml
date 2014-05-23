@@ -4,9 +4,11 @@
   <head>
     <title>DynamicMailer{% if title %} - {{ title }}{% endif %}</title>
     {% block extracss %}{% endblock %}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="{{ STATIC_URL }}js/plugins/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery-ui.css" />
+    <script src="{{ STATIC_URL }}js/plugins/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" />
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-tagsinput.css" />
   </head>
   <body>
     <div class="container container-fluid">
@@ -15,6 +17,9 @@
         </div>
         {% block content %}{% endblock %}
     </div>
+    <script src="{{ STATIC_URL }}js/plugins/bootstrap.min.js"></script>
+    <script src="{{ STATIC_URL }}js/plugins/bootstrap-formhelpers.js"></script>
+    <script src="{{ STATIC_URL }}js/plugins/bootstrap-tagsinput.js"></script>
     {% block extrajs %}{% endblock %}
   </body>
 </html>

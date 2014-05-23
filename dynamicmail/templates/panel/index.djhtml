@@ -1,18 +1,38 @@
 {% extends 'base.djhtml' %}
-{% load bootstrap3 %}
-{% block extracss %}
-    {% bootstrap_css %}
-{% endblock %}
 {% block extrajs %}
-    {% bootstrap_javascript %}
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('#id_web_handler').on('change', function(){
+            $('#id_recipients').tagsinput('removeAll');
+            if($(this).val() != ''){
+                $.get( "/api/v1/webhandler/"+ $(this).val() +"/", function( data ) {
+                  $.each(data.recipients, function(index, value){
+                    $('#id_recipients').tagsinput('add', value.email);
+                  });
+                });
+            }
+        });
+      });
+  </script>
 {% endblock %}
-
 {% block content %}
   <div class="row-fluid">
       <div class="col-md-6 col-md-offset-3">
-          <div class="well well-small">
+          <div class="well well-small" style="margin-top: 80px;">
+              <h3><em style="color: #ccc">Dynamic</em>Mailer</h3>
               <form method="" action="">
-
+                {% csrf_token %}
+                {% for f in form %}
+                  <div class="form-group">
+                      <label for="{{ f.name }}" class="control-label">{{ f.label }}</label>
+                      {{ f }}
+                  </div>
+                {% endfor %}
+                  <div class="form-group">
+                      <label>Recipients</label><br />
+                      <input type="text" id="id_recipients" class="form-control input-lg" name="recipients" value="" data-role="tagsinput" placeholder="Add Recipients" />
+                  </div>
+                  <button class="btn btn-success btn-lg sendmail">Send</button>
               </form>
           </div>
       </div>

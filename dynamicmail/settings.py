@@ -24,6 +24,9 @@ DATABASES = {
     }
 }
 
+# Api key for sendwith us
+SWU_API_KEY = 'test_58752524ed3475a3aa96faca4889899bad7c31f8'
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -131,6 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'bootstrap3',
+    'tastypie',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'mailman',
