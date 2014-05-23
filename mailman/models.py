@@ -14,7 +14,7 @@ class Recipient(models.Model):
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     linkedin_link = models.URLField(blank=True, null=True)
-    email = models.EmailField(blank=True, null=True)
+    email = models.EmailField()
 
     def __unicode__(self):
         return "%s %s" % (self.first_name, self.last_name)
