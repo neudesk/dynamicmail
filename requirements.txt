@@ -5,3 +5,4 @@ django-bootstrap3
 sendwithus
 django-tastypie
 django-grappelli
+django-suit
