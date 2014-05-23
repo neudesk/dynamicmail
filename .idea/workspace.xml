@@ -100,8 +100,10 @@
       <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mailman/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="74" selection-start="610" selection-end="610" vertical-scroll-proportion="0.6323185" vertical-offset="0" max-vertical-offset="465">
-              <folding />
+            <state line="1" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.035128806" vertical-offset="0" max-vertical-offset="495">
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -499,7 +501,9 @@
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="40" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="225">
-          <folding />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -569,7 +573,9 @@
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="40" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="225">
-          <folding />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -805,8 +811,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="74" selection-start="610" selection-end="610" vertical-scroll-proportion="0.6323185" vertical-offset="0" max-vertical-offset="465">
-          <folding />
+        <state line="1" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.035128806" vertical-offset="0" max-vertical-offset="495">
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
