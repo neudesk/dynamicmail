@@ -11,12 +11,11 @@ class PanelIndex(FormView):
     success_url = '/panel/success'
 
     def form_valid(self, form):
-        form.save()
-        # try:
-        #     form.save()
-        # except Exception as e:
-        #     messages.error(self.request, e)
-        #     self.success_url = '/panel/'
+        try:
+            form.save()
+        except Exception as e:
+            messages.error(self.request, e)
+            self.success_url = '/panel/'
         return super(PanelIndex, self).form_valid(form)
 
 class Success(TemplateView):

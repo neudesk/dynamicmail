@@ -1,0 +1,28 @@
+{% extends 'base.djhtml' %}
+{% block extrajs %}
+{% endblock %}
+{% block content %}
+  <div class="row-fluid" style="margin-top: 80px;">
+      <div style="width: 330px; margin: 0 auto">
+          <div class="well well-small">
+              <h3><em style="color: #ccc">Dynamic</em>Mailer</h3>
+              <form method="POST" action=".">
+                {% if error %}
+                  <div class="alert alert-danger alert-dismissable">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                      {{ error }}
+                  </div>
+                {% endif %}
+                {% csrf_token %}
+                {% for f in form %}
+                  <div class="form-group">
+                      <label for="{{ f.name }}" class="control-label">{{ f.label }}</label>
+                      <input name="{{ f.name }}" class="form-control input-lg" placeholder="{{ f.label|title }}" {% if f.name == 'password' %}type="password"{% endif %} />
+                  </div>
+                {% endfor %}
+                  <button type="submit" class="btn btn-success btn-lg sendmail">Log In</button>
+              </form>
+          </div>
+      </div>
+  </div>
+{% endblock %}
