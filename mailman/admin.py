@@ -2,7 +2,7 @@ from django.contrib import admin
 from mailman.models import *
 
 class ColumnAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',), }
+    # prepopulated_fields = {'slug': ('name',), }
     list_display = ('__str__', 'slug')
 
 class ColumnDataAdmin(admin.ModelAdmin):

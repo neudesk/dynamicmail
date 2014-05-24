@@ -38,9 +38,32 @@ class PanelForm(forms.Form):
             res = api.send(
                             email_id=template_id,
                             recipient={'address': r},
-                            email_data=data.update(rec_data)
+                            email_data=rec_data.update(data)
                           )
             if res.status_code != 200:
                 raise Exception(res.text)
                 break
 
+    def check_data(self, webhandler_id):
+        webhandler = WebHandler.objects.filter(id=webhandler_id)[0]
+        columndata = webhandler.columndata_set.all()
+        recipient = Recipient.objects.filter(email='neumerance@live.com')[0]
+        rec_data = {'first_name': recipient.first_name,
+                    'last_name': recipient.last_name,
+                    'email': recipient.email,
+                    'linkedin_link': recipient.linkedin_link}
+        data = {}
+        for d in columndata:
+            data[d.column.slug] = d.value
+        data.update(rec_data)
+        res = self.send_testmail(data)
+        return res
+
+    def send_testmail(self, data):
+        api = sendwithus.api(api_key=settings.SWU_API_KEY)
+        r = api.send(
+          email_id='tem_ed8qjPxQtAEqHwDWVzNwU4',
+          recipient={'address': 'neumerance@live.com'},
+          email_data=data
+        )
+        return r
