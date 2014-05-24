@@ -81,7 +81,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/panel/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="26" selection-start="545" selection-end="545" vertical-scroll-proportion="0.5654102" vertical-offset="0" max-vertical-offset="451">
+            <state line="25" column="84" selection-start="945" selection-end="945" vertical-scroll-proportion="0.83148557" vertical-offset="0" max-vertical-offset="510">
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -550,15 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamicmail/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="54" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="585">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/index.djhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="35" selection-start="117" selection-end="117" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="795">
@@ -588,9 +579,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="54" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="585">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/panel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="26" selection-start="545" selection-end="545" vertical-scroll-proportion="0.5654102" vertical-offset="0" max-vertical-offset="451">
+        <state line="25" column="84" selection-start="945" selection-end="945" vertical-scroll-proportion="0.83148557" vertical-offset="0" max-vertical-offset="510">
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
