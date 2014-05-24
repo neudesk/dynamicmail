@@ -73,7 +73,7 @@
       <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/panel/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="63" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.036231883" vertical-offset="345" max-vertical-offset="1080">
+            <state line="19" column="19" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.036231883" vertical-offset="225" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -118,7 +118,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="39" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="13" column="19" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
@@ -140,7 +140,6 @@
         <option value="$PROJECT_DIR$/mailman/api.py" />
         <option value="$PROJECT_DIR$/panel/urls.py" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/panel/index.djhtml" />
-        <option value="$PROJECT_DIR$/panel/views.py" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/base.djhtml" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/panel/success.djhtml" />
         <option value="$PROJECT_DIR$/wsgi.py" />
@@ -149,6 +148,7 @@
         <option value="$PROJECT_DIR$/mailman/models.py" />
         <option value="$PROJECT_DIR$/dynamicmail/settings.py" />
         <option value="$PROJECT_DIR$/mailman/admin.py" />
+        <option value="$PROJECT_DIR$/panel/views.py" />
         <option value="$PROJECT_DIR$/panel/forms.py" />
       </list>
     </option>
@@ -778,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/panel/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/success.djhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="46" selection-start="628" selection-end="628" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="375">
@@ -815,9 +808,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/panel/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/panel/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="63" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.036231883" vertical-offset="345" max-vertical-offset="1080">
+        <state line="19" column="19" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.036231883" vertical-offset="225" max-vertical-offset="960">
           <folding />
         </state>
       </provider>

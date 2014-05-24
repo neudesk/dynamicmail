@@ -20,44 +20,36 @@ class PanelForm(forms.Form):
                                         required=True)
     recipients = forms.CharField(max_length=450)
 
-    def save(self, commit=True):
-        template_id = self.cleaned_data['email_templates']
-        webhandler = WebHandler.objects.filter(id=self.cleaned_data['web_handler'])[0]
-        columndata = webhandler.columndata_set.all()
+    def save(self):
         api = sendwithus.api(api_key=settings.SWU_API_KEY)
-        recipients = self.cleaned_data['recipients'].split(',')
-        data = {}
-        for d in columndata:
-            data[d.column.slug] = d.value
-        for r in recipients:
-            recipient = Recipient.objects.filter(email=r)[0]
-            rec_data = {'first_name': recipient.first_name,
-                        'last_name': recipient.last_name,
-                        'email': recipient.email,
-                        'linkedin_link': recipient.linkedin_link}
+        template_id = self.cleaned_data['email_templates']
+        for d in self.get_data(self.cleaned_data):
             res = api.send(
                             email_id=template_id,
-                            recipient={'address': r},
-                            email_data=rec_data.update(data)
+                            recipient={'address': d['email']},
+                            email_data=d
                           )
             if res.status_code != 200:
                 raise Exception(res.text)
                 break
 
-    def check_data(self, webhandler_id):
-        webhandler = WebHandler.objects.filter(id=webhandler_id)[0]
+    def get_data(self, form_data):
+        data = []
+        webhandler = WebHandler.objects.filter(id=form_data['web_handler'])[0]
         columndata = webhandler.columndata_set.all()
-        recipient = Recipient.objects.filter(email='neumerance@live.com')[0]
-        rec_data = {'first_name': recipient.first_name,
-                    'last_name': recipient.last_name,
-                    'email': recipient.email,
-                    'linkedin_link': recipient.linkedin_link}
-        data = {}
+        recipients = form_data['recipients'].split(',')
+        item = {}
         for d in columndata:
-            data[d.column.slug] = d.value
-        data.update(rec_data)
-        res = self.send_testmail(data)
-        return res
+            item[d.column.slug] = d.value
+        for r in recipients:
+            recipient = Recipient.objects.filter(email=r)[0]
+            recipient_data = {'first_name': recipient.first_name,
+                              'last_name': recipient.last_name,
+                              'email': recipient.email,
+                              'linkedin_link': recipient.linkedin_link}
+            recipient_data.update(item)
+            data.append(recipient_data)
+        return data
 
     def send_testmail(self, data):
         api = sendwithus.api(api_key=settings.SWU_API_KEY)
