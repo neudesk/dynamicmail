@@ -1,6 +1,18 @@
 import sendwithus
 from django.db import models
 from django.conf import settings
+import csv
+
+class DataSource(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.TextField(max_length=150)
+    file = models.FileField(upload_to='csv')
+
+    def __unicode__(self):
+        return self.name
+
+    # def save(self, *args, **kwargs):
+    #     path = self.file
 
 class WebHandler(models.Model):
     url = models.URLField(unique=True)
@@ -14,7 +26,8 @@ class Recipient(models.Model):
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     linkedin_link = models.URLField(blank=True, null=True)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
+    contact_title = models.CharField(max_length=150)
 
     def __unicode__(self):
         return "%s %s" % (self.first_name, self.last_name)
