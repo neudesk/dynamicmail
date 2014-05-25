@@ -82,7 +82,7 @@ class DataSourceForm(forms.ModelForm):
 
     def migrate_recipients(self, webhandler_instance, recipient_header, recipient_value):
         recipient_dic = {'web_handler': webhandler_instance}
-        for idx, value in recipient_header:
+        for idx, value in enumerate(recipient_header):
             recipient_dic[value] = recipient_value[idx]
         recipient = Recipient.objects.filter(email=recipient_dic['email'])
         if not recipient:
@@ -108,7 +108,7 @@ class DataSourceForm(forms.ModelForm):
 
     def migrate_columndata(self, webhandler_instance, column_header, column_value):
         columndata_dic = {'web_handler': webhandler_instance}
-        for idx, value in column_header:
+        for idx, value in enumerate(column_header):
             columndata_dic[value] = column_value[idx]
         for k, v in columndata_dic:
             columndata =  ColumnData.objects.filter(name=v)
@@ -127,7 +127,7 @@ class DataSourceForm(forms.ModelForm):
         recipient_header = self.get_recipients_header(headers)
         column_header = self.get_column_data_header(headers)
 
-        for idx, val in webhandler_header:
+        for idx, val in enumerate(webhandler_header):
             webhandler_instance = self.migrate_web_handler(val)
             recipient_value = column_data[idx]
             recipient = self.migrate_recipients(webhandler_instance,
