@@ -2,6 +2,7 @@ from django.contrib import admin
 from mailman.models import *
 from .formutils import ExtFileField
 from django import forms
+from django.conf import settings
 import csv, re
 
 class ColumnAdmin(admin.ModelAdmin):
@@ -10,6 +11,7 @@ class ColumnAdmin(admin.ModelAdmin):
 
 class ColumnDataAdmin(admin.ModelAdmin):
     list_display = ('web_handler', 'column_name', 'value', 'variable_name')
+    list_filter = ('web_handler',)
 
     def web_handler(self, instance):
         return instance.web_handler.url
@@ -21,7 +23,8 @@ class ColumnDataAdmin(admin.ModelAdmin):
         return instance.column.slug
 
 class RecipientsAdmin(admin.ModelAdmin):
-    list_display = ('__str__', 'contact_title', 'first_name', 'last_name', 'email', 'recipient_of')
+    list_filter = ('web_handler',)
+    list_display = ('__str__', 'contact_title', 'first_name', 'last_name', 'email', 'linkedin_link', 'recipient_of')
 
     def recipient_of(self, instance):
         return instance.web_handler.url
@@ -36,110 +39,90 @@ class DataSourceForm(forms.ModelForm):
         filepath = instance.file
         return [row for row in csv.reader(filepath.read().splitlines())]
 
-    def get_header(self, data):
+    def buildjson(self, data):
         header = data[0]
-        del header[0]
-        return header
-
-    def get_webhandler_header(self, header):
-        return [header[i] for i in [0]]
-
-    def get_recipients_header(self, header):
-        return [header[i] for i in [2, 3, 4, 5, 6]]
-
-    def get_column_data_header(self, header):
-        columndata = set(header).difference(self.get_webhandler_header(header))
-        return list(set(columndata).difference(self.get_recipients_header(header)))
-
-    def get_data_rows(self, data):
         del data[0]
-        return data
+        json = {}
+        for idx, value in enumerate(header):
+            json[value] = [d[idx] for d in data]
+        return json
 
-    def get_webhandler_column_value(self, row):
-        del row[0]
-        return [row[i] for i in [0]]
+    def migrate_webhandler(self, json):
+        data = json['website']
+        idx = []
+        for d in data:
+            webhandler = WebHandler.objects.filter(url=d)
+            if not webhandler:
+                webhandler = WebHandler.objects.create(url=d)
+            else:
+                webhandler = webhandler[0]
+            idx.append(webhandler)
+        return idx
 
-    def get_recipients_column_value(self, row):
-        del row[0]
-        return [row[i] for i in [2, 3, 4, 5, 6]]
+    def migrate_recipients(self, json, webhandler_objects):
+        idx = 0
+        for obj in webhandler_objects:
+            first_name = json['first name'][idx]
+            last_name = json['last name'][idx]
+            email = json['email'][idx]
+            linkedin_link = json['linkedin link'][idx]
+            contact_title = json['contact title'][idx]
+            recipient = Recipient.objects.filter(email=email)
+            if not recipient:
+                recipient = Recipient.objects.create(email=email,
+                                                     last_name=last_name,
+                                                     first_name=first_name,
+                                                     linkedin_link=linkedin_link,
+                                                     contact_title=contact_title,
+                                                     web_handler=obj)
+                recipient.save()
+            idx += 1
 
-    def del_item(self, row):
-        del row
-        return row
+    def migrate_column(self, json):
+        excluded_items = ['first name', 'last name', 'contact title', 'linkedin link', 'email', 'key', 'website']
+        column_obj = {}
+        for k, v in json.items():
+            if k not in excluded_items:
+                column = Column.objects.filter(name=k)
+                if not column:
+                    column = Column.objects.create(name=k,
+                                                   slug=re.sub(" ", "_", k))
+                else:
+                    column = column[0]
+                column_obj[k] = column
+        return column_obj
 
-    def get_row_column_data_value(self, row):
-        value = set(row).difference(self.get_recipients_column_value(row))
-        return list(set(value).difference(self.get_webhandler_column_value(row)))
+    def migrate_columndata(self, json, webhandler_objects, column_obj):
+        excluded_items = ['first name', 'last name', 'contact title', 'linkedin link', 'email', 'key', 'website']
+        for k, v in json.items():
+            if k not in excluded_items:
+                idx = 0
+                for w in webhandler_objects:
+                    columndata = ColumnData.objects.filter(web_handler=w,
+                                                          column=column_obj[k])
+                    if not columndata:
+                        columndata = ColumnData.objects.create(web_handler=w,
+                                                               column=column_obj[k],
+                                                               value=v[idx])
+                    else:
+                        columndata = columndata[0]
+                        columndata.value = v[idx]
+                        columndata.save()
+                    idx += 1
 
-    def migrate_web_handler(self, wh):
-        webhandler = WebHandler.objects.filter(url=wh)
-        if not webhandler:
-            webhandler = WebHandler.objects.create(url=wh)
-            webhandler.save()
-        else:
-            webhandler = webhandler[0]
-        return  webhandler
+    def migratejson(self, instance):
+        json = self.buildjson(self.get_data(instance))
+        webhandler_objects = self.migrate_webhandler(json)
+        self.migrate_recipients(json, webhandler_objects)
+        column_obj = self.migrate_column(json)
+        self.migrate_columndata(json, webhandler_objects, column_obj)
 
-    def migrate_recipients(self, webhandler_instance, recipient_header, recipient_value):
-        recipient_dic = {'web_handler': webhandler_instance}
-        for idx, value in enumerate(recipient_header):
-            recipient_dic[value] = recipient_value[idx]
-        recipient = Recipient.objects.filter(email=recipient_dic['email'])
-        if not recipient:
-            recipient = Recipient.objects.create(email=recipient_dic['email'],
-                                                 last_name=recipient_dic['last_name'],
-                                                 first_name=recipient_dic['first_name'],
-                                                 linkedin_link=recipient_dic['linkedin_link'],
-                                                 contact_title=recipient_dic['recipient_dic'],
-                                                 web_handler=recipient_dic['web_handler'])
-            recipient.save()
-        else:
-            recipient = recipient[0]
-        return recipient
 
-    def migrate_column(self, column_header):
-        column = Column.objects.filter(name=column_header)
-        if not column:
-            column = Column.objects.create(name=column_header, slug=re.sub(' ', '_', column_header))
-            column.save()
-        else:
-            column = column[0]
-        return column
 
-    def migrate_columndata(self, webhandler_instance, column_header, column_value):
-        columndata_dic = {'web_handler': webhandler_instance}
-        for idx, value in enumerate(column_header):
-            columndata_dic[value] = column_value[idx]
-        for k, v in columndata_dic:
-            columndata =  ColumnData.objects.filter(name=v)
-            if not columndata:
-                column = Column.objects.filter(name=columndata_dic[k])
-                columndata = ColumnData.objects.create(name=column,
-                                                       web_handler=columndata_dic['web_handler'],
-                                                       value=columndata_dic[k])
-                return columndata
-
-    def migratecsv(self, instance):
-        data = self.get_data(instance)
-        column_data = self.get_data_rows(data)
-        headers = self.get_header(data)
-        webhandler_header = self.get_webhandler_header(headers)
-        recipient_header = self.get_recipients_header(headers)
-        column_header = self.get_column_data_header(headers)
-
-        for idx, val in enumerate(webhandler_header):
-            webhandler_instance = self.migrate_web_handler(val)
-            recipient_value = column_data[idx]
-            recipient = self.migrate_recipients(webhandler_instance,
-                                                recipient_header,
-                                                recipient_value)
-            column_value = self.get_row_column_data_value(column_data[idx])
-            self.migrate_columndata(self, webhandler_instance, column_header, column_value)
-
-    def save(self, commit=True):
-        instance = super(DataSourceForm, self).save()
-        self.migratecsv(instance)
-        return instance
+    # def save(self, commit=True):
+    #     instance = super(DataSourceForm, self).save()
+    #     self.migratecsv(instance)
+    #     return instance
 
 class DataSourceAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'file')

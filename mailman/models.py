@@ -25,9 +25,9 @@ class Recipient(models.Model):
     web_handler = models.ForeignKey(WebHandler, related_name='webhandler')
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
-    linkedin_link = models.URLField(blank=True, null=True)
+    linkedin_link = models.TextField(blank=True, null=True)
     email = models.EmailField(unique=True)
-    contact_title = models.CharField(max_length=150)
+    contact_title = models.CharField(max_length=150, blank=True, null=True)
 
     def __unicode__(self):
         return "%s %s" % (self.first_name, self.last_name)
