@@ -16,33 +16,43 @@
   </script>
 {% endblock %}
 {% block content %}
-  <div class="row-fluid" style="margin-top: 30px;">
-      <div class="col-md-4 col-md-offset-4">
-          <div class="well well-small">
-              <h3><em style="color: #ccc">Dynamic</em>Mailer</h3>
-              <ul class="nav nav-tabs pull-right">
-                  <li><a href="#settings">Settings</a></li>
-                  <li><a href="/logout">Log Out</a></li>
-              </ul>
-              <hr style="clear: both" />
-              <form method="POST" action=".">
-                {% csrf_token %}
-                {% for f in form %}
-                  {% if f.name == 'recipients' %}
-                  <div class="form-group">
-                      <label>Recipients</label><br />
-                      <input type="text" id="id_recipients" class="form-control input-lg" name="{{ f.name }}" value="" data-role="tagsinput" placeholder="Add Recipients" />
-                  </div>
-                  {% else %}
-                  <div class="form-group">
-                      <label for="{{ f.name }}" class="control-label">{{ f.label }}</label>
-                      {{ f }}
-                  </div>
-                  {% endif %}
-                {% endfor %}
-                  <button type="submit" class="btn btn-success btn-lg sendmail">Send</button>
-              </form>
+  <div class="container auth">
+    <h3 class="text-center white">DynamicMailer <br /><small class="white"><i>Powered by SendWithUs</i></small> </h3>
+    <div id="big-form" class="well auth-box">
+      <form method="post" action=".">
+        {% csrf_token %}
+        <div class="pull-right">
+            <div class="btn-group">
+                <a href="#settings" class="btn btn-default">Settings</a>
+                <a href="/logout/" class="btn btn-default">Log Out</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <fieldset>
+
+            {% for f in form %}
+              {% if f.name == 'recipients' %}
+              <div class="form-group">
+                  <label>Recipients</label><br />
+                  <input type="text" id="id_recipients" class="form-control input-lg" name="{{ f.name }}" value="" data-role="tagsinput" placeholder="Add Recipients" />
+              </div>
+              {% else %}
+              <div class="form-group">
+                  <label for="{{ f.name }}" class="control-label">{{ f.label }}</label>
+                  {{ f }}
+              </div>
+              {% endif %}
+            {% endfor %}
+
+          <div class="form-group">
+            <div class="">
+              <button id="login" name="submit" type="submit" class="btn btn-default">Send Mail</button>
+              {% if error %}<a style="color: orange">{{ error|capfirst }}</a>{% endif %}
+            </div>
           </div>
-      </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="clearfix"></div>
   </div>
 {% endblock %}

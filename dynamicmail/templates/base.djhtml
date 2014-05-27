@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-tagsinput.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/logintheme.css" />
   </head>
   <body>
     <div class="container container-fluid">
         <div id="exceptionBox" class="col-md-4" style="position: absolute; top: 20px; right: 20px; z-index: 9">
             {% bootstrap_messages %}
         </div>
-        {% block content %}{% endblock %}
     </div>
+    {% block content %}{% endblock %}
     <script src="{{ STATIC_URL }}js/plugins/bootstrap.min.js"></script>
     <script src="{{ STATIC_URL }}js/plugins/bootstrap-formhelpers.js"></script>
     <script src="{{ STATIC_URL }}js/plugins/bootstrap-tagsinput.js"></script>
