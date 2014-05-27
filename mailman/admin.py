@@ -118,11 +118,12 @@ class DataSourceForm(forms.ModelForm):
         self.migrate_columndata(json, webhandler_objects, column_obj)
 
 
-
-    # def save(self, commit=True):
-    #     instance = super(DataSourceForm, self).save()
-    #     self.migratecsv(instance)
-    #     return instance
+    def save(self, force_insert=False, force_update=False, commit=True):
+        ins = super(DataSourceForm, self).save(commit=False)
+        self.migratejson(ins)
+        if commit:
+            object = ins.save()
+        return ins
 
 class DataSourceAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'file')
