@@ -23,50 +23,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.djhtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dynamicmail/templates/auth/login.djhtml">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mailman/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="338" selection-end="338" vertical-scroll-proportion="0.28985506" vertical-offset="0" max-vertical-offset="615">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.djhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/index.djhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="28" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-11.375" vertical-offset="162" max-vertical-offset="945">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="success.djhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/success.djhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="6" selection-start="284" selection-end="660" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330">
+            <state line="30" column="0" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logintheme.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamicmail/staticfiles/css/logintheme.css">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mailman/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="13" selection-start="4251" selection-end="4251" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2865">
+            <state line="88" column="1" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.0" vertical-offset="1375" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.djhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamicmail/templates/base.djhtml">
+      <file leaf-file-name="404.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamicmail/templates/404.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="14" selection-start="948" selection-end="948" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="480">
+            <state line="19" column="14" selection-start="663" selection-end="663" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="500.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamicmail/templates/500.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="117" selection-start="472" selection-end="472" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="300">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamicmail/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="43" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="570">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dynamicmail/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="12" selection-start="66" selection-end="66" vertical-scroll-proportion="0.10273973" vertical-offset="0" max-vertical-offset="2850">
               <folding />
             </state>
           </provider>
@@ -86,25 +91,27 @@
         <option value="$PROJECT_DIR$/panel/templates/index.djhtml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mailman/api.py" />
-        <option value="$PROJECT_DIR$/panel/urls.py" />
         <option value="$PROJECT_DIR$/wsgi.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/auth/login.html" />
         <option value="$PROJECT_DIR$/auth/views.py" />
-        <option value="$PROJECT_DIR$/dynamicmail/urls.py" />
         <option value="$PROJECT_DIR$/panel/views.py" />
-        <option value="$PROJECT_DIR$/dynamicmail/settings.py" />
         <option value="$PROJECT_DIR$/panel/forms.py" />
         <option value="$PROJECT_DIR$/mailman/management/commands/migratecsv.py" />
         <option value="$PROJECT_DIR$/mailman/formutils.py" />
-        <option value="$PROJECT_DIR$/mailman/models.py" />
         <option value="$PROJECT_DIR$/mailman/admin.py" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/base.djhtml" />
         <option value="$PROJECT_DIR$/dynamicmail/staticfiles/css/logintheme.css" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/panel/success.djhtml" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/panel/index.djhtml" />
         <option value="$PROJECT_DIR$/dynamicmail/templates/auth/login.djhtml" />
+        <option value="$PROJECT_DIR$/mailman/models.py" />
+        <option value="$PROJECT_DIR$/dynamicmail/templates/404.html" />
+        <option value="$PROJECT_DIR$/dynamicmail/templates/500.html" />
+        <option value="$PROJECT_DIR$/panel/urls.py" />
+        <option value="$PROJECT_DIR$/dynamicmail/urls.py" />
+        <option value="$PROJECT_DIR$/dynamicmail/settings.py" />
       </list>
     </option>
   </component>
@@ -156,6 +163,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -184,46 +192,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="panel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -241,58 +209,27 @@
               <option name="myItemId" value="dynamicmail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dynamicmail" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dynamicmail" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dynamicmail" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staticfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamicmail" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="staticfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,6 +239,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistory" value="c&#10;'" />
     <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -310,11 +248,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dynamicmail/templates" />
       <recent name="$PROJECT_DIR$/mailman/management/commands" />
       <recent name="$PROJECT_DIR$/mailman/management" />
       <recent name="$PROJECT_DIR$/dynamicmail/templates/auth" />
       <recent name="$PROJECT_DIR$/dynamicmail" />
-      <recent name="$PROJECT_DIR$/dynamicmail/templates/panel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dynamicmail/templates/auth" />
@@ -336,6 +274,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <method />
@@ -350,6 +289,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -372,6 +312,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -386,6 +327,9 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -396,6 +340,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -415,6 +360,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -422,6 +368,26 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
@@ -434,6 +400,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dynamicmail" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -481,6 +448,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921794" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -537,103 +505,93 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mailman/models.py">
+    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/success.djhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+        <state line="7" column="6" selection-start="284" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="330">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/staticfiles/css/logintheme.css">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="13" selection-start="4251" selection-end="4251" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/base.djhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="14" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mailman/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="84" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="510">
-          <folding />
-        </state>
+        <state line="25" column="84" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/formutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="23" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.0" vertical-offset="1625" max-vertical-offset="2115">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="124" column="23" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.0" vertical-offset="1625" max-vertical-offset="2115" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/formutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="32" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1965">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="36" column="32" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1965" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="32" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="24" column="32" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/formutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="8" selection-start="1436" selection-end="1472" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2295">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="50" column="8" selection-start="1436" selection-end="1472" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2295" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="32" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="24" column="32" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/formutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="39" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2370">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="44" column="39" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2370" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/settings.py">
@@ -643,25 +601,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="17" selection-start="767" selection-end="780" vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="930">
-          <folding />
-        </state>
+        <state line="27" column="17" selection-start="767" selection-end="780" vertical-scroll-proportion="0.0" vertical-offset="317" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/formutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="19" selection-start="3531" selection-end="3531" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2355">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="100" column="19" selection-start="3531" selection-end="3531" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/settings.py">
@@ -731,9 +681,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/formutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="32" column="19" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel/forms.py">
@@ -741,93 +689,114 @@
         <state line="61" column="0" selection-start="2716" selection-end="2716" vertical-scroll-proportion="0.9350649" vertical-offset="438" max-vertical-offset="960" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mailman/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mailman/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="1" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.4" vertical-offset="1130" max-vertical-offset="2115">
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/templates/base.djhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="14" selection-start="948" selection-end="948" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="480">
+        <state line="18" column="14" selection-start="948" selection-end="948" vertical-scroll-proportion="0.5205479" vertical-offset="42" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mailman/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="84" selection-start="945" selection-end="945" vertical-scroll-proportion="0.56842107" vertical-offset="0" max-vertical-offset="475">
-          <folding />
-        </state>
+        <state line="25" column="84" selection-start="945" selection-end="945" vertical-scroll-proportion="0.56842107" vertical-offset="0" max-vertical-offset="475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.6818182" vertical-offset="0" max-vertical-offset="462">
-          <folding />
-        </state>
+        <state line="23" column="19" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.6818182" vertical-offset="0" max-vertical-offset="462" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/staticfiles/css/logintheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="13" selection-start="4251" selection-end="4251" vertical-scroll-proportion="0.0" vertical-offset="2330" max-vertical-offset="2865">
-          <folding />
-        </state>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamicmail/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="60" selection-start="888" selection-end="888" vertical-scroll-proportion="0.5707763" vertical-offset="155" max-vertical-offset="2850">
+        <state line="184" column="13" selection-start="4251" selection-end="4251" vertical-scroll-proportion="5.487013" vertical-offset="225" max-vertical-offset="2865">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/success.djhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="284" selection-end="660" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="330">
+        <state line="7" column="6" selection-start="284" selection-end="660" vertical-scroll-proportion="0.23972602" vertical-offset="0" max-vertical-offset="438">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/staticfiles/css/jquery-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17760" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/auth/login.djhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="250" selection-end="250" vertical-scroll-proportion="0.036231883" vertical-offset="75" max-vertical-offset="615">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/index.djhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="28" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mailman/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mailman/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="1" selection-start="3165" selection-end="3165" vertical-scroll-proportion="0.0" vertical-offset="1375" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="663" selection-end="663" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="49" selection-start="150" selection-end="150" vertical-scroll-proportion="0.1330377" vertical-offset="0" max-vertical-offset="451">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="117" selection-start="472" selection-end="472" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamicmail/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="54" selection-start="950" selection-end="950" vertical-scroll-proportion="0.5343681" vertical-offset="119" max-vertical-offset="570">
+        <state line="22" column="43" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="570">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/panel/index.djhtml">
+    <entry file="file://$PROJECT_DIR$/dynamicmail/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="28" selection-start="1145" selection-end="1145" vertical-scroll-proportion="-11.375" vertical-offset="162" max-vertical-offset="945">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamicmail/templates/auth/login.djhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="338" selection-end="338" vertical-scroll-proportion="0.28985506" vertical-offset="0" max-vertical-offset="615">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="3" column="12" selection-start="66" selection-end="66" vertical-scroll-proportion="0.10273973" vertical-offset="0" max-vertical-offset="2850">
+          <folding />
         </state>
       </provider>
     </entry>
